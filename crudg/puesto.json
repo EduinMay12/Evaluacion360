@@ -1,0 +1,34 @@
+{
+	"model_name":"Puesto",
+	"soft_deletes":"yes",
+	"pk":"id",
+	"localize":"yes",
+	"table":"puesto",
+    "fields": [
+        {
+            "name": "nombre",
+            "type": "string"
+        },
+        {
+            "name": "descripcion",
+            "type": "string"
+        },
+				{
+            "name": "puesto",
+            "type": "string"
+        }
+
+    ],
+    "foreign_keys": [
+    ],
+    "relationships": [
+
+    ],
+    "validations": [
+        {
+            "field": "nombre",
+            "rules": "required|min:5|max:20"
+        }
+    ]
+
+}

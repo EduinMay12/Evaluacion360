@@ -17,6 +17,7 @@ class CreateNivelsTable extends Migration
             $table->timestamps();
             $table->string('competencia')->nullable();
             $table->string('nivel')->nullable();
+            $table->foreign('competencias_id')->references('id')->on('competencias')->onDelete('cascade');
             });
     }
 

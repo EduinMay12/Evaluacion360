@@ -88,27 +88,9 @@
                                         <td>{{ $item->experimentadocorto1 }}<br/><br/>{{ $item->experimentadocorto2 }}<br/><br/>{{ $item->experimentadocorto3 }}<br/></td>
                                         <td>
                                         <!-- Button trigger modal -->
-                                        <button style="background-color: #cebd5a; border: none;" type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#exampleModal1">
-                                        <i class="fa fa-eye" aria-hidden="true"></i>
-                                        </button>
+                                        <a href="{{ url('/competencia/' . $item->id) }}" title="View Puesto"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i></button></a>
                                         </td>
-                                        <!-- Modal -->
-                                        <div class="modal fade bd-example-modal-lg" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog modal-lg" role="document">
-                                            <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title" id="exampleModalLabel">Detalles de la Competencia </h5>
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
-                                                </button>
-                                            </div>
-                                            <div class="modal-body">
-                                            
-                                            </div>
-                                            </div>
-                                        </div>
-                                        </div>
-                                        </td>
+
                                         <td>
                                         <a href="{{ url('/competencia/' . $item->id . '/edit') }}" title="Edit Puesto"><button style="background-color: #cebd5a; border: none;" class="btn btn-primary btn-sm"><i class="fa fa-edit" aria-hidden="true"></i></button></a>
                                         </td>

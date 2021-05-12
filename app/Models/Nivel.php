@@ -25,9 +25,9 @@ class Nivel extends Model
      *
      * @var array
      */
-    protected $fillable = ['competencias_id', 'nivel'];
+    protected $fillable = ['competencia', 'nivel'];
 
-    public function nivel(){
-        return $this->belongsTo('App\Competencium', 'competencias_id', 'id');
-    }
+    //public function nivel(){
+    //    return $this->belongsTo('App\Competencium', 'competencias_id', 'id');
+    //}
 }

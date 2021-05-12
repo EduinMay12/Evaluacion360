@@ -16,8 +16,8 @@ class CreateNivelsTable extends Migration
             $table->increments('id');
             $table->timestamps();
             $table->string('nivel')->nullable();
-            $table->unsignedInteger('competencias_id'); 
-            $table->foreign('competencias_id')->references('id')->on('competencias');
+            $table->unsignedInteger('competencia'); 
+            //$table->foreign('competencias_id')->references('id')->on('competencias');
             });
     }
 

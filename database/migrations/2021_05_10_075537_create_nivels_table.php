@@ -15,9 +15,9 @@ class CreateNivelsTable extends Migration
         Schema::create('nivels', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
-            $table->string('competencia')->nullable();
             $table->string('nivel')->nullable();
-            $table->foreign('competencias_id')->references('id')->on('competencias')->onDelete('cascade');
+            $table->unsignedInteger('competencias_id'); 
+            $table->foreign('competencias_id')->references('id')->on('competencias');
             });
     }
 

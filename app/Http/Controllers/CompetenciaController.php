@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests;
 
 use App\Models\Competencium;
+use App\Models\Nivel;
 use Illuminate\Http\Request;
 
 class CompetenciaController extends Controller

@@ -87,7 +87,7 @@
                                 <tbody class="lineas">
                                 @foreach($competencia as $item)
                                     <tr>
-                                        <td>{{ $loop->iteration }}</td>
+                                        <td>{{ $item->id }}</td>
                                         <td>{{ $item->nombre }}</td>
                                         <td>{{ $item->basicocorto1 }}<br/><br/>{{ $item->basicocorto2 }}<br/><br/>{{ $item->basicocorto3 }}<br/></td>
                                         <td>{{ $item->calificadocorto1 }}<br/><br/>{{ $item->calificadocorto2 }}<br/><br/>{{ $item->calificadocorto3 }}<br/></td>

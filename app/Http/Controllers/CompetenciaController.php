@@ -18,7 +18,7 @@ class CompetenciaController extends Controller
     public function index(Request $request)
     {
         $keyword = $request->get('search');
-        $perPage = 2;
+        $perPage = 10;
 
         if (!empty($keyword)) {
             $competencia = Competencium::where('nombre', 'LIKE', "%$keyword%")

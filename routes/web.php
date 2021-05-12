@@ -22,10 +22,7 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-/** Crud de Competencias */
-Route::resource('/competencia', CompetenciaController::class);
-/** Crud de Competencias */
+Route::resource('competencia', 'App\Http\Controllers\CompetenciaController');
+Route::resource('puesto', 'App\Http\Controllers\PuestoController');
+Route::resource('nivel', 'App\Http\Controllers\NivelController');
 
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

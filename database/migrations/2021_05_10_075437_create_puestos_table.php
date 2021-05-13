@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 
 class CreatePuestosTable extends Migration
 {
@@ -13,11 +14,11 @@ class CreatePuestosTable extends Migration
     public function up()
     {
         Schema::create('puestos', function (Blueprint $table) {
-            $table->increments('id');
+            $table->id();
+            $table->string('nombre', 250);
+            $table->string('descripcion', 250);
+            $table->string('reporta_a')->nullable();
             $table->timestamps();
-            $table->string('nombre')->nullable();
-            $table->string('descripcion')->nullable();
-            $table->string('puesto')->nullable();
             });
     }
 

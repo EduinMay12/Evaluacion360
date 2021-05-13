@@ -2,30 +2,20 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-
 class Puesto extends Model
 {
-    /**
-     * The database table used by the model.
-     *
-     * @var string
-     */
-    protected $table = 'puestos';
+    use HasFactory;
 
-    /**
-    * The database primary key value.
-    *
-    * @var string
-    */
-    protected $primaryKey = 'id';
+    protected $guarded = [];
+    
 
-    /**
-     * Attributes that should be mass-assignable.
-     *
-     * @var array
-     */
-    protected $fillable = ['nombre', 'descripcion', 'puesto'];
+    // Relacion muchos a muchos
+    public function competencias()
+    {
+        return $this->belongsToMany('App\Models\Competencium')->withPivot('nivel');
+    }
 
     
 }

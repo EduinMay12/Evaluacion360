@@ -240,7 +240,7 @@ return [
         [
             'text'       => 'Puestos',
             'icon_color' => 'yellow',
-            'url'        => '/puesto',
+            'url'        => '/puestos',
         ],
         [
             'text'       => 'Personas',

@@ -35,6 +35,7 @@ class CreateCompetenciasTable extends Migration
             $table->string('experimentadoaccion1')->nullable();
             $table->string('experimentadoaccion2')->nullable();
             $table->string('experimentadoaccion3')->nullable();
+            $table->engine = 'InnoDB';
             });
     }
 

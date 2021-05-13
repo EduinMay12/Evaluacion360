@@ -19,7 +19,7 @@
                     </form>
                 </td>
             </tr>
-        endforeach
+        @endforeach
             </tbody>
     </table>
     <div class="pagination-wrapper"> {!! $nivel->appends(['search' => Request::get('search')])->render() !!} </div>

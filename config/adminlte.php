@@ -14,7 +14,7 @@ return [
     |
     */
 
-    'title' => 'AdminLTE 3',
+    'title' => 'Evaluacion360',
     'title_prefix' => '',
     'title_postfix' => '',
 
@@ -65,11 +65,11 @@ return [
     */
 
     'usermenu_enabled' => true,
-    'usermenu_header' => false,
+    'usermenu_header' => true,
     'usermenu_header_class' => 'bg-primary',
-    'usermenu_image' => false,
-    'usermenu_desc' => false,
-    'usermenu_profile_url' => false,
+    'usermenu_image' => true,
+    'usermenu_desc' => true,
+    'usermenu_profile_url' => true,
 
     /*
     |--------------------------------------------------------------------------
@@ -85,7 +85,7 @@ return [
 
     'layout_topnav' => null,
     'layout_boxed' => null,
-    'layout_fixed_sidebar' => null,
+    'layout_fixed_sidebar' => true,
     'layout_fixed_navbar' => null,
     'layout_fixed_footer' => null,
 
@@ -128,7 +128,7 @@ return [
     'classes_content' => '',
     'classes_sidebar' => 'sidebar-dark-primary elevation-4',
     'classes_sidebar_nav' => '',
-    'classes_topnav' => 'navbar-white navbar-light',
+    'classes_topnav' => 'navbar-white navbar-dark',
     'classes_topnav_nav' => 'navbar-expand',
     'classes_topnav_container' => 'container',
 
@@ -145,9 +145,9 @@ return [
     */
 
     'sidebar_mini' => true,
-    'sidebar_collapse' => false,
-    'sidebar_collapse_auto_size' => false,
-    'sidebar_collapse_remember' => false,
+    'sidebar_collapse' => true,
+    'sidebar_collapse_auto_size' => true,
+    'sidebar_collapse_remember' => true,
     'sidebar_collapse_remember_no_transition' => true,
     'sidebar_scrollbar_theme' => 'os-theme-light',
     'sidebar_scrollbar_auto_hide' => 'l',
@@ -225,27 +225,29 @@ return [
 
     'menu' => [
 
-        ['header' => 'Home'],
+        ['header' => 'Panel Principal'],
         [
-            'text' => 'Principal',
+            'text' => ' Inicio',
             'url'  => '/home',
             'icon' => 'fas fa-fw fa-home',
         ],
-        ['header' => 'Niveles'],
+        ['header' => 'Complementos'],
         [
-            'text'       => 'Competencias',
-            'icon_color' => 'red',
+            'text'       => ' Competencias',
+            'icon_color' => 'black',
             'url'        => '/competencia',
+            'icon' => 'fas fa-fw fa-cogs',
         ],
         [
-            'text'       => 'Puestos',
+            'text'       => ' Puestos',
             'icon_color' => 'yellow',
             'url'        => '/puesto',
         ],
         [
-            'text'       => 'Personas',
-            'icon_color' => 'cyan',
-            'url'        => '#',
+            'text'       => ' Personas',
+            'icon_color' => 'green',
+            'url'        => '/profile',
+            'icon' => 'fas fa-fw fa-user',
         ],
     ],
 

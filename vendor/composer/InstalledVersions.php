@@ -19,7 +19,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => 'af2de349b3fa54dac60af108e878bdbb4a3fc85e',
+    'reference' => 'fd0674fcc6a9aa849c4363624ccd7b27d79d3952',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
@@ -444,6 +444,15 @@ private static $installed = array (
         0 => 'v8.40.0',
       ),
     ),
+    'intervention/image' => 
+    array (
+      'pretty_version' => '2.5.1',
+      'version' => '2.5.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'abbf18d5ab8367f96b3205ca3c89fb2fa598c69e',
+    ),
     'jeroennoten/laravel-adminlte' => 
     array (
       'pretty_version' => 'v3.5.4',
@@ -476,7 +485,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => 'af2de349b3fa54dac60af108e878bdbb4a3fc85e',
+      'reference' => 'fd0674fcc6a9aa849c4363624ccd7b27d79d3952',
     ),
     'laravel/sail' => 
     array (

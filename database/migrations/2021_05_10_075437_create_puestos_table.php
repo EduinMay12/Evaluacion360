@@ -18,6 +18,7 @@ class CreatePuestosTable extends Migration
             $table->string('nombre')->nullable();
             $table->string('descripcion')->nullable();
             $table->string('puesto')->nullable();
+            $table->engine = 'InnoDB';
             });
     }
 

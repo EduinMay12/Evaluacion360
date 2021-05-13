@@ -17,7 +17,7 @@ class CreatePuestosTable extends Migration
             $table->id();
             $table->string('nombre', 250);
             $table->string('descripcion', 250);
-            $table->string('puesto')->nullable();
+            $table->string('reporta_a')->nullable();
             $table->timestamps();
             });
     }

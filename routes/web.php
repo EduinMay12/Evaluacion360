@@ -22,6 +22,7 @@ Route::get('/', function () {
 
 Auth::routes();
 Route::group(['middleware' => 'auth'], function () {
+    
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
     Route::resource('competencia', 'App\Http\Controllers\CompetenciaController');
 
@@ -36,7 +37,6 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('puestos', PuestoController::class);
     Route::post('puesto-competencia/{puesto}', [PuestoController::class, 'guardar_cp'])->name('puesto-competencia.guardar_cp');
     Route::delete('puesto-competencia/{puesto}', [PuestoController::class, 'eliminar_cp'])->name('puesto-competencia.eliminar_cp');
-    Route::resource('nivel', 'App\Http\Controllers\NivelController');
 
 
 });

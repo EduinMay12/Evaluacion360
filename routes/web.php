@@ -19,12 +19,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+<<<<<<< HEAD
 Auth::routes();
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
     Route::resource('competencia', 'App\Http\Controllers\CompetenciaController');
     Route::resource('puesto', 'App\Http\Controllers\PuestoController');
     Route::resource('nivel', 'App\Http\Controllers\NivelController');
+=======
+>>>>>>> origin/Emiliano_Cocom
 
 <<<<<<< HEAD
     Route::resource('profile', 'App\Http\Controllers\ProfileController');
@@ -36,6 +39,7 @@ Route::group(['middleware' => 'auth'], function () {
 });
 =======
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+<<<<<<< HEAD
 Route::resource('competencia', 'App\Http\Controllers\CompetenciaController');
 Route::resource('puestos', PuestoController::class);
 Route::post('puesto-competencia/{puesto}', [PuestoController::class, 'guardar_cp'])->name('puesto-competencia.guardar_cp');
@@ -44,3 +48,25 @@ Route::resource('nivel', 'App\Http\Controllers\NivelController');
 
 
 >>>>>>> jose_cocom
+=======
+
+Route::get('personas', function () {
+    return view('personas.index');
+});
+
+Route::get('personas/edit', function () {
+    return view('personas.edit');
+});
+
+Route::get('competencias', function () {
+    return view('competencias.index');
+});
+
+Route::get('competencias/create', function () {
+    return view('competencias.create');
+});
+
+Route::get('puestos', function () {
+    return view('puestos.index');
+});
+>>>>>>> origin/Emiliano_Cocom

@@ -8022,7 +8022,10 @@
     ],
     "dev": true,
     "dev-package-names": [
+<<<<<<< HEAD
         "appzcoder/crud-generator",
+=======
+>>>>>>> origin/Emiliano_Cocom
         "doctrine/instantiator",
         "facade/flare-client-php",
         "facade/ignition",
@@ -8031,7 +8034,10 @@
         "filp/whoops",
         "hamcrest/hamcrest-php",
         "laravel/sail",
+<<<<<<< HEAD
         "laravelcollective/html",
+=======
+>>>>>>> origin/Emiliano_Cocom
         "mockery/mockery",
         "myclabs/deep-copy",
         "nunomaduro/collision",

@@ -17,6 +17,25 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('personas', function () {
+    return view('personas.index');
+});
+
+Route::get('personas/edit', function () {
+    return view('personas.edit');
+});
+
+Route::get('competencias', function () {
+    return view('competencias.index');
+});
+
+Route::get('competencias/create', function () {
+    return view('competencias.create');
+});
+
+Route::get('puestos', function () {
+    return view('puestos.index');
+});

@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests;
 
 use App\Models\Puesto;
+use App\Models\Competencium;
 use App\Models\Nivel;
 use Illuminate\Http\Request;
 
@@ -24,13 +25,13 @@ class PuestoController extends Controller
         if (!empty($keyword)) {
             $puesto = Puesto::where('nombre', 'LIKE', "%$keyword%")
                 ->orWhere('descripcion', 'LIKE', "%$keyword%")
-                ->orWhere('puesto', 'LIKE', "%$keyword%")
+                ->orWhere('reporta_a', 'LIKE', "%$keyword%")
                 ->latest()->paginate($perPage);
         } else {
             $puesto = Puesto::latest()->paginate($perPage);
         }
 
-        return view('puesto.index', compact('puesto'));
+        return view('puestos.index', compact('puesto'));
     }
 
     /**
@@ -40,7 +41,8 @@ class PuestoController extends Controller
      */
     public function create()
     {
-        return view('puesto.create');
+        $puestos = Puesto::all();
+        return view('puestos.create', compact('puestos'));
     }
 
     /**
@@ -57,7 +59,7 @@ class PuestoController extends Controller
         
         Puesto::create($requestData);
 
-        return redirect('puesto')->with('flash_message', 'Puesto added!');
+        return redirect()->route('puestos.index')->with('flash_message', 'Puesto Agregado!');
     }
 
     /**
@@ -67,11 +69,9 @@ class PuestoController extends Controller
      *
      * @return \Illuminate\View\View
      */
-    public function show($id)
+    public function show(Puesto $puesto)
     {
-        $puesto = Puesto::findOrFail($id);
-
-        return view('puesto.show', compact('puesto'));
+        return view('puestos.show', compact('puesto'));
     }
 
     /**
@@ -81,18 +81,12 @@ class PuestoController extends Controller
      *
      * @return \Illuminate\View\View
      */
-    public function niveledit($id)
-    {
-        $nivel = Nivel::findOrFail($id);
-
-        return view('nivel.edit', compact('nivel'));
-    }
     
-    public function edit($id)
+    public function edit(Puesto $puesto)
     {
-        $puesto = Puesto::findOrFail($id);
-
-        return view('puesto.edit', compact('puesto'));
+        $competencias = Competencium::all();
+        $puestos = Puesto::all();
+        return view('puestos.edit', compact('puesto','competencias','puestos'));
     }
 
     /**
@@ -105,13 +99,12 @@ class PuestoController extends Controller
      */
     public function update(Request $request, $id)
     {
-    
         $requestData = $request->all();
         
         $puesto = Puesto::findOrFail($id);
         $puesto->update($requestData);
 
-        return redirect('puesto')->with('flash_message', 'Puesto updated!');
+        return redirect()->route('puestos.index')->with('flash_message', 'Puesto actualizado');
     }
 
     /**
@@ -125,6 +118,22 @@ class PuestoController extends Controller
     {
         Puesto::destroy($id);
 
-        return redirect('puesto')->with('flash_message', 'Puesto deleted!');
+        return redirect()->route('puestos.index')->with('flash_message', 'Puesto eliminado');
+    }
+
+    public function guardar_cp(Request $request, Puesto $puesto)
+    {
+        $nivel = $request->nivel;
+        $puesto->competencias()->attach($request->competencia, ['nivel' => $nivel]);
+
+        return redirect()->route('puestos.edit', $puesto);
+    }
+
+    public function eliminar_cp(Request $request, Puesto $puesto)
+    {
+        $nivel = $request->nivel;
+        $puesto->competencias()->detach($request->competencia, ['nivel' => $nivel]);
+
+        return redirect()->route('puestos.edit', $puesto);
     }
 }

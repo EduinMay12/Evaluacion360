@@ -26,12 +26,4 @@ class Competencium extends Model
      * @var array
      */
     protected $fillable = ['nombre', 'descripcion', 'basicocorto1', 'basicocorto2', 'basicocorto3', 'basicoaccion1', 'basicoaccion2', 'basicoaccion3', 'calificadocorto1', 'calificadocorto2', 'calificadocorto3', 'calificadoaccion1', 'calificadoaccion2', 'calificadoaccion3', 'experimentadocorto1', 'experimentadocorto2', 'experimentadocorto3', 'experimentadoaccion1', 'experimentadoaccion2', 'experimentadoaccion3'];
-
-
-    public function puestos()
-    {
-        return $this->belongsToMany('App\Models\Puesto');
-    }
-
-    
 }

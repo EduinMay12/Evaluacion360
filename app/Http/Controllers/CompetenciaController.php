@@ -17,7 +17,7 @@ class CompetenciaController extends Controller
     public function index(Request $request)
     {
         $keyword = $request->get('search');
-        $perPage = 5;
+        $perPage = 10;
 
         if (!empty($keyword)) {
             $competencia = Competencium::where('nombre', 'LIKE', "%$keyword%")
@@ -59,7 +59,7 @@ class CompetenciaController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Store a newly created resource in storage. 
      *
      * @param \Illuminate\Http\Request $request
      *

@@ -17,15 +17,8 @@ class CreatePuestosTable extends Migration
             $table->id();
             $table->string('nombre', 250);
             $table->string('descripcion', 250);
-            $table->string('reporta_a')->nullable();
-            $table->timestamps();
-<<<<<<< HEAD
-            $table->string('nombre')->nullable();
-            $table->string('descripcion')->nullable();
             $table->string('puesto')->nullable();
-            $table->engine = 'InnoDB';
-=======
->>>>>>> jose_cocom
+            $table->timestamps();
             });
     }
 

@@ -23,10 +23,10 @@
                         <div class="modal fade bd-example-modal-lg" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog modal-lg" role="document">
                             <div class="modal-content">
-                            <div class="modal-header" style="background-color: #9c4848;">
-                                <h5 class="modal-title" id="exampleModalLabel" style="color: #f2f4f6;">Crear una nueva cuneta</h5>
+                            <div class="modal-header" style="background-color: #4BD851;">
+                                <h5 class="modal-title" id="exampleModalLabel">Crear una nueva cuneta</h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true" style="color: #f2f4f6;">&times;</span>
+                                <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
                             <div class="modal-body" style="background-color: #fbedc3;">

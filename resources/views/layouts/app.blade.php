@@ -21,9 +21,9 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-light shadow-sm" style="background-color: #8A0D48;">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <a style="color: #fff;" class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -33,7 +33,24 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-
+                    <li class="nav-item">
+                            <a class="nav-link active" style="color: #fff;" href="#1">{{ __('Principal') }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" style="color: #fff;" href="{{ route('competencia.index')}}">{{ __('Competencias') }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" style="color: #fff;" href="#3">{{ __('Puestos') }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" style="color: #fff;" href="#4">{{ __('Personas') }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" style="color: #fff;" href="#5">{{ __('Asignaciones') }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" style="color: #fff;" href="#6">{{ __('Reportes') }}</a>
+                        </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -42,13 +59,13 @@
                         @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                    <a class="nav-link" style="color: #fff;" href="{{ route('login') }}">{{ __('Login') }}</a>
                                 </li>
                             @endif
 
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link" style="color: #fff;" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
                             @endif
                         @else

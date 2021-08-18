@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -16,8 +17,13 @@ class User extends Authenticatable
      *
      * @var array
      */
+
+
     protected $fillable = [
         'name',
+        'avatar',
+        'puesto',
+        'tipo',
         'email',
         'password',
     ];
@@ -40,4 +46,19 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+    
+    public function adminlte_image()
+    {
+        return '{{ $user->avatar }}';
+    }
+
+    public function adminlte_desc()
+    {
+        return '{{ Auth::user->avatar }}';
+    }
+
+    public function adminlte_profile_url()
+    {
+        return 'user';
+    }
 }

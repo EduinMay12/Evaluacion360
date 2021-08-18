@@ -1,0 +1,102 @@
+{
+	"model_name":"Competencia",
+	"soft_deletes":"yes",
+	"pk":"id",
+	"localize":"yes",
+	"table":"competencia",
+    "fields": [
+        {
+            "name": "nombre",
+            "type": "string"
+        },
+        {
+            "name": "descripcion",
+            "type": "string"
+        },
+				{
+            "name": "basicocorto1",
+            "type": "string"
+        },
+        {
+            "name": "basicocorto2",
+            "type": "string"
+        },
+				{
+            "name": "basicocorto3",
+            "type": "string"
+        },
+        {
+            "name": "basicoaccion1",
+            "type": "string"
+        },
+        {
+            "name": "basicoaccion2",
+            "type": "string"
+        },
+        {
+            "name": "basicoaccion3",
+            "type": "string"
+        },
+        {
+            "name": "calificadocorto1",
+            "type": "string"
+        },
+        {
+            "name": "calificadocorto2",
+            "type": "string"
+        },
+        {
+            "name": "calificadocorto3",
+            "type": "string"
+        },
+        {
+            "name": "calificadoaccion1",
+            "type": "string"
+        },
+        {
+            "name": "calificadoaccion2",
+            "type": "string"
+        },
+        {
+            "name": "calificadoaccion3",
+            "type": "string"
+        },
+        {
+            "name": "experimentadocorto1",
+            "type": "string"
+        },
+        {
+            "name": "experimentadocorto2",
+            "type": "string"
+        },
+        {
+            "name": "experimentadocorto3",
+            "type": "string"
+        },
+        {
+            "name": "experimentadoaccion1",
+            "type": "string"
+        },
+        {
+            "name": "experimentadoaccion2",
+            "type": "string"
+        },
+        {
+            "name": "experimentadoaccion3",
+            "type": "string"
+        }
+
+    ],
+    "foreign_keys": [
+    ],
+    "relationships": [
+
+    ],
+    "validations": [
+        {
+            "field": "nombre",
+            "rules": "required|min:5|max:20"
+        }
+    ]
+
+}
